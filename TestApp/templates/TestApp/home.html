@@ -1,0 +1,15 @@
+{% extends 'TestApp/base.html' %}
+{% load staticfiles %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+{% endblock style %}
+{% block content %}
+<div class="container">
+        <h1>
+            <span class="txt-type" data-wait="4500" data-words='["Artist", "Data Analyst","Developer", "Gamer"]'></span>
+        </h1>
+    </div>
+<script type="text/javascript" src="{% static 'js/typewrite.js'%}"></script>
+{% endblock content %}
+
+

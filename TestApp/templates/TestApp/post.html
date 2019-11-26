@@ -1,0 +1,19 @@
+{% extends 'TestApp/base.html' %}
+{% load staticfiles %}
+{% block style %}
+
+<link rel="stylesheet" type="text/css" href=" {% static '/css/prism(1).css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/post.css' %}">
+{% endblock style %}
+
+{% block content %}
+<div class="container">
+    <h1>{{post.title}}</h1>
+    <h3>Posted: {{post.whenpublished}}</h3>
+    <div class=content>
+        <p>{{post.content|safe}}</p>
+    </div>
+</div>
+<script type="text/javascript " src="{% static '/js/prism.js'%}"></script>
+
+{% endblock content %}

@@ -1,0 +1,38 @@
+{% extends 'TestApp/base.html' %}
+{% load staticfiles %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/contact.css'%}">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+{% endblock style %}
+
+
+{% block content %}
+    
+    <div class="container">
+        <form class= "contact-form" method="post">
+        {% csrf_token %}
+            <input type="text" id = "name" name="name" class="contact-form-text" placeholder="Your Name">
+            <input type="text"  id = "emailid" name="emailid"  class="contact-form-text" placeholder="Your Email Id">
+            <textarea  id = "message" name="message" class="contact-form-text" placeholder="Message..."></textarea>
+            <input type="submit" class="contact-form-btn" value="Send">      
+        
+        </form>
+    </div>
+    <div class="social">
+    <ul>
+        <li>
+        <a href="https://github.com/tushar50896"><i class="fa fa-github" aria-hidden="true"></i></a>
+        </li>
+        <li>
+        <a href="https://www.twitch.tv/tushar50896"><i class="fa fa-twitch" aria-hidden="true"></i></a>
+        </li>
+        <li>
+        <a href="https://www.linkedin.com/in/tushar50896/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        </li>
+        <li>
+        <a href="https://twitter.com/Tushar50896"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </li>
+        
+    </ul>
+    </div>
+{% endblock content %}

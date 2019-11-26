@@ -1,0 +1,64 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>TUSHAR</title>
+    <link rel="icon" type="image/ico" href="{% static 'images/icon.png'%}" >
+    
+    {% block style %}
+    {% endblock style %}
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="{% static 'js/preload.js'%}"></script>
+
+</head>
+
+<body>
+    
+    <div class="preload"></div>
+    <header>
+
+        <div class="menu">
+            <div class="bar"></div>
+        </div>
+        <div class="overlay"></div>
+        <nav>
+            <a href="/" class="tushar">
+                <span class="nbr ltr">-</span>
+                <span class="nbr ltr">-</span>
+                <span class="nbr ltr">-</span>
+                <span class="nbr ltr">-</span>
+                <span class="nbr ltr">-</span>
+                <span class="nbr ltr">-</span>
+
+            </a>
+            <ul>
+                <li class="nav-item">
+                    <a href="{% url 'Site-Home' %}" class="nav-link" data-text="Home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'Site-Blog' %}" class="nav-link" data-text="Blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-text="Projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'Site-Contact' %}" class="nav-link" data-text="Contact">Contact</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    
+    {% block content %}
+    {% endblock content %}
+    <script type="text/javascript " src="{% static 'js/random.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/app.js'%}"></script>
+    
+</body>
+</html>
